@@ -13,11 +13,14 @@
         <div class="container mt-4">
             <a href="/">Home</a>
             <a href="{{ route('articles.index') }}">Articles</a>
+            <a href="{{ route('articles.create') }}">New article</a>
             <a href="/about">About</a>
         </div>
         <div class="container mt-4">
             <h1>@yield('header')</h1>
             <div>
+                @include('flash-message')
+
                 @yield('content')
             </div>
         </div>
